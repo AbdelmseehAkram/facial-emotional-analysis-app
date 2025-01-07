@@ -2,10 +2,18 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image
+import os
+import gdown
+
+if not os.path.exists("model.keras"):
+    url = "https://drive.google.com/uc?id=FILE_ID"
+    output = "model.keras"
+    gdown.download(url, output, quiet=False)
+
+model = load_model("model.keras")
 
 # Load the pre-trained model
-model = load_model(r'C:\Users\dell\OneDrive\Desktop\New folder (2)\model.keras')
-
+model = load_model('model.keras')
 # Define emotion labels
 emotion_labels = ["Angry", "Disgust", "Fear", "Happy", "Sad", "Surprise", "Neutral"]
 
