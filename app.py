@@ -24,7 +24,7 @@ st.write("📷 **Upload an image to classify the emotion.**")
 
 # Sidebar for additional settings
 st.sidebar.title("⚙️ Settings")
-bg_color = st.sidebar.color_picker("Choose Background Color", "#ffffff")
+bg_color = st.sidebar.color_picker("Choose Background Color", "#000000")  # Default color is black (#000000)
 
 # Dynamically change the background color using CSS
 st.markdown(
@@ -32,6 +32,7 @@ st.markdown(
     <style>
         .stApp {{
             background-color: {bg_color};
+            color: white;  /* Text color to ensure visibility on black background */
         }}
     </style>
     """,
@@ -75,5 +76,6 @@ else:
 
 # Footer for additional information
 st.markdown("---")
-st.markdown("Developed with ❤️ by [Abdelmseeh](https://www.linkedin.com/in/abdelmseeh-akram-347616262/")
-
+st.markdown(
+    "Developed with ❤️ by [Abdelmseeh](https://www.linkedin.com/in/abdelmseeh-akram-347616262/)"
+)
