@@ -6,7 +6,7 @@ import os
 import gdown
 
 if not os.path.exists("model.keras"):
-    url = "https://drive.google.com/uc?id=FILE_ID"
+    url = "https://drive.google.com/file/d/1CszW4Xb8tvdv4DJM59Ob8mbitc4q1FG_/view?usp=sharing"
     output = "model.keras"
     gdown.download(url, output, quiet=False)
 
